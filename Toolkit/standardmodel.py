@@ -150,6 +150,15 @@ particles = [
 	top_antiquark, bottom_antiquark,
 ]
 
+forces = [
+    electromagnetic_force, weak_nuclear_force, strong_nuclear_force, gravitational_force,
+]
+
+compositeparticles = [
+    proton, anti_proton, neutron, anti_neutron, positive_pion, neutral_pion,
+    negative_pion, positive_kaon, neutral_kaon, negative_kaon, anti_neutral_kaon,
+]
+
 particles.sort(key=lambda x: (x.particle_type, x.name))
 
 # Print formatted information about the particles
@@ -167,24 +176,13 @@ print("=" * 221)
 print("Name                 Description                                                                           Mediator Particle              Strength")
 print("-" * 221)
 # Print formatted information about fundamental forces
-print(electromagnetic_force.formatted_str())
-print(weak_nuclear_force.formatted_str())
-print(strong_nuclear_force.formatted_str())
-print(gravitational_force.formatted_str())
+for force in forces:
+    print(force.formatted_str())
 print("=" * 221)
 # Print information about the composite particle
 print("Composite Particle Information:")
 print("=" * 221)
 print("Name                 Constituents                                                 Mass                     Charge                                   Spin                                      Classification")
 print("-" * 221)
-print(proton.formatted_str())
-print(anti_proton.formatted_str())
-print(neutron.formatted_str())
-print(anti_neutron.formatted_str())
-print(positive_pion.formatted_str())
-print(neutral_pion.formatted_str())
-print(negative_pion.formatted_str())
-print(positive_kaon.formatted_str())
-print(neutral_kaon.formatted_str())
-print(negative_kaon.formatted_str())
-print(anti_neutral_kaon.formatted_str())
+for particle in compositeparticles:
+    print(particle.formatted_str())
