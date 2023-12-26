@@ -119,7 +119,7 @@ electromagnetic_force = FundamentalForce(
 weak_nuclear_force = FundamentalForce(
     name="Weak Nuclear",
     description="Responsible for processes involving neutrinos and flavor-changing quark interactions.",
-    mediator_particle="W and Z Bosons",
+    mediator_particle="W+, W-, and Z Bosons",
     strength=1e-13  # Much weaker than electromagnetic force
 )
 
@@ -186,3 +186,4 @@ print("Name                 Constituents                                        
 print("-" * 221)
 for particle in compositeparticles:
     print(particle.formatted_str())
+print("=" * 221)
