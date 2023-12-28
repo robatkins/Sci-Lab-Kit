@@ -134,7 +134,7 @@ gravitational_force = FundamentalForce(
     name="Gravitational",
     description="Gravity is described by the theory of general relativity.                            ",
     mediator_particle="Graviton (Hypothetical)",
-    strength="Dependent on the curvature of space-time." #Dependent on the curvature of space-time
+    strength="Proportional to the product of the masses of the objects and inversely proportional to the square of the distance between them." #Dependent on the curvature of space-time
 )
 
 
@@ -162,28 +162,28 @@ compositeparticles = [
 particles.sort(key=lambda x: (x.particle_type, x.name))
 
 # Print formatted information about the particles
-print("=" * 221)
+print("=" * 275)
 print("Fundamental Particle Information:")
-print("=" * 221)
+print("=" * 275)
 print("Name                Symbol Mass               Charge     Spin  Type")
-print("-" * 221)
+print("-" * 275)
 for particle in particles:
     print(particle.formatted_str())
 
-print("=" * 221)
+print("=" * 275)
 print("Fundamental Force Information:")
-print("=" * 221)
+print("=" * 275)
 print("Name                 Description                                                                           Mediator Particle              Strength")
-print("-" * 221)
+print("-" * 275)
 # Print formatted information about fundamental forces
 for force in forces:
     print(force.formatted_str())
-print("=" * 221)
+print("=" * 275)
 # Print information about the composite particle
 print("Composite Particle Information:")
-print("=" * 221)
+print("=" * 275)
 print("Name                 Constituents                                                 Mass                     Charge                                   Spin                                      Classification")
-print("-" * 221)
+print("-" * 275)
 for particle in compositeparticles:
     print(particle.formatted_str())
-print("=" * 221)
+print("=" * 275)

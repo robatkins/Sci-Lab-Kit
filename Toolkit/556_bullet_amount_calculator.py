@@ -4,8 +4,8 @@ GRAINS_PER_BULLET = 70
 BULLETS_PER_BOX = 20
 SELLING_BOX_PRICE = 20.00
 COST_OF_GUNPOWDER = 50.00  # per pound
-COST_OF_PRIMER = 1.00
-COST_OF_BRASS = 1.00
+COST_OF_PRIMER = 109.99 # per 1000
+COST_OF_BRASS = 28.99 #per 50
 
 # Function to calculate the number of bullets
 def calculate_bullets(gunpowder_pounds):
